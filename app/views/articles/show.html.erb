@@ -1,5 +1,10 @@
-<h1>Show me the one Article <%= @articles.title %></h1>
+<h1>Show me the one Article <%= @article.title %></h1>
 
 <h2>Where is the ID?</h2>
 
-<p>Content <%= @articles.content %></p>
+<p>Content <%= @article.content %></p>
+
+<%= link_to "Delete"
+article_path(@article)
+data: turbo_method: :delete, turbo_confirm: "Are you sure?"
+%>
